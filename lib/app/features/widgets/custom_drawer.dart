@@ -13,9 +13,47 @@ class CustomDrawer extends StatelessWidget {
         child: ListView(
           children: const [
             DrawerHeader(
+              margin: EdgeInsets.only(bottom: 0),
+              padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
               child: Text(
                 'MOVIES',
                 style: TextStyle(color: Colors.amber, fontSize: 25),
+              ),
+            ),
+            ListTile(
+              title: Text(
+                'Menu',
+                style: TextStyle(color: Colors.amber, fontSize: 16),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.message_outlined,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Chat',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.people,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Friendly',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.cloud_download_outlined,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Cloud',
+                style: TextStyle(color: Colors.white, fontSize: 16),
               ),
             ),
             ListTile(
@@ -30,14 +68,50 @@ class CustomDrawer extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(
-                Icons.cloud_download_outlined,
+                Icons.poll_outlined,
                 color: Colors.white,
               ),
               title: Text(
-                'Cloud',
+                'Popular',
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
-            )
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.movie_creation_outlined,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Up Coming',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+            ListTile(
+              title: Text(
+                'General',
+                style: TextStyle(color: Colors.amber, fontSize: 16),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Settings',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.logout_outlined,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Log Out',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
           ],
         ),
       ),

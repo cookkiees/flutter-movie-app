@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:fluttermovieapp/app/features/account/account_screen.dart';
 import 'package:fluttermovieapp/app/features/dashboard/dashboard_controller.dart';
 import 'package:fluttermovieapp/app/features/home/home_screen.dart';
+import 'package:fluttermovieapp/app/features/movie/movie_screen.dart/detail_movie_screen.dart';
 import 'package:fluttermovieapp/app/features/search/search_screen.dart';
+
 import 'package:get/get.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -14,11 +16,11 @@ class DashboardPage extends StatelessWidget {
       return Scaffold(
         body: IndexedStack(
           index: controller.tabIndex,
-          children: const [
+          children: [
             HomeScreen(),
             SearchScreen(),
-            Center(child: Text('Search')),
-            AccountScreen()
+            AccountScreen(),
+            Icon(Icons.abc),
           ],
         ),
         bottomNavigationBar: Container(

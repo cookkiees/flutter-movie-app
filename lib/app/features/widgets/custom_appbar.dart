@@ -12,11 +12,11 @@ class CustomAppbar extends StatelessWidget {
       backgroundColor: Colors.transparent,
       title: const Text('MOVIES'),
       leading: Padding(
-        padding: const EdgeInsets.only(left: 8, top: 8),
+        padding: const EdgeInsets.only(left: 16, top: 16),
         child: Builder(
           builder: (context) => Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16), color: Colors.white30),
+                borderRadius: BorderRadius.circular(8), color: Colors.white30),
             child: IconButton(
               onPressed: () {
                 Scaffold.of(context).openDrawer();
@@ -28,21 +28,21 @@ class CustomAppbar extends StatelessWidget {
       ),
       actions: [
         Padding(
-          padding: const EdgeInsets.only(top: 8),
+          padding: const EdgeInsets.only(top: 16, right: 16),
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16), color: Colors.white30),
+                borderRadius: BorderRadius.circular(8), color: Colors.white30),
             child: GestureDetector(
               child: Image.asset('assets/icons/Zoom.png'),
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 16, top: 8),
+          padding: const EdgeInsets.only(top: 16, right: 8),
           child: Container(
-            width: 48,
+            width: 40,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16), color: Colors.white30),
+                borderRadius: BorderRadius.circular(8), color: Colors.white30),
             child: GestureDetector(
               child: Image.asset('assets/icons/Combined Shape.png'),
             ),

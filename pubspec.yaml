@@ -32,11 +32,11 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   get: ^4.6.5
-  dio: ^5.0.2
   http:
-  curved_navigation_bar: ^1.0.3
   carousel_slider: ^4.2.1
   flutter_rating_bar: ^4.0.1
+  skeletons: ^0.0.3
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:

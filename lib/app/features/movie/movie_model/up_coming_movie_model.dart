@@ -1,17 +1,24 @@
-class MovieModel {
+class UpComingModel {
+  Dates? dates;
   int? page;
-  List<Results>? results;
+  List<ResultsItem>? results;
   int? totalPages;
   int? totalResults;
 
-  MovieModel({this.page, this.results, this.totalPages, this.totalResults});
+  UpComingModel(
+      {this.dates,
+      this.page,
+      this.results,
+      this.totalPages,
+      this.totalResults});
 
-  MovieModel.fromJson(Map<String, dynamic> json) {
+  UpComingModel.fromJson(Map<String, dynamic> json) {
+    dates = json['dates'] != null ? new Dates.fromJson(json['dates']) : null;
     page = json['page'];
     if (json['results'] != null) {
-      results = <Results>[];
+      results = <ResultsItem>[];
       json['results'].forEach((v) {
-        results!.add(new Results.fromJson(v));
+        results!.add(new ResultsItem.fromJson(v));
       });
     }
     totalPages = json['total_pages'];
@@ -20,6 +27,9 @@ class MovieModel {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.dates != null) {
+      data['dates'] = this.dates!.toJson();
+    }
     data['page'] = this.page;
     if (this.results != null) {
       data['results'] = this.results!.map((v) => v.toJson()).toList();
@@ -30,7 +40,26 @@ class MovieModel {
   }
 }
 
-class Results {
+class Dates {
+  String? maximum;
+  String? minimum;
+
+  Dates({this.maximum, this.minimum});
+
+  Dates.fromJson(Map<String, dynamic> json) {
+    maximum = json['maximum'];
+    minimum = json['minimum'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['maximum'] = this.maximum;
+    data['minimum'] = this.minimum;
+    return data;
+  }
+}
+
+class ResultsItem {
   bool? adult;
   String? backdropPath;
   List<int>? genreIds;
@@ -43,10 +72,10 @@ class Results {
   String? releaseDate;
   String? title;
   bool? video;
-  double? voteAverage;
+
   int? voteCount;
 
-  Results(
+  ResultsItem(
       {this.adult,
       this.backdropPath,
       this.genreIds,
@@ -59,10 +88,9 @@ class Results {
       this.releaseDate,
       this.title,
       this.video,
-      // this.voteAverage,
       this.voteCount});
 
-  Results.fromJson(Map<String, dynamic> json) {
+  ResultsItem.fromJson(Map<String, dynamic> json) {
     adult = json['adult'];
     backdropPath = json['backdrop_path'];
     genreIds = json['genre_ids'].cast<int>();
@@ -75,7 +103,7 @@ class Results {
     releaseDate = json['release_date'];
     title = json['title'];
     video = json['video'];
-    // voteAverage = json['vote_average'];
+
     voteCount = json['vote_count'];
   }
 
@@ -93,7 +121,7 @@ class Results {
     data['release_date'] = this.releaseDate;
     data['title'] = this.title;
     data['video'] = this.video;
-    // data['vote_average'] = this.voteAverage;
+
     data['vote_count'] = this.voteCount;
     return data;
   }

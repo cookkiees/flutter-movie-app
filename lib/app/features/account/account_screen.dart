@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermovieapp/app/features/home/home_controller.dart';
+
 import 'package:get/get.dart';
 
-class AccountScreen extends GetView<HomeController> {
+import '../dashboard/dashboard_controller.dart';
+
+class AccountScreen extends GetView<DashboardController> {
   const AccountScreen({super.key});
 
   @override
