@@ -32,11 +32,12 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   get: ^4.6.5
-  http:
   carousel_slider: ^4.2.1
-  flutter_rating_bar: ^4.0.1
-  skeletons: ^0.0.3
-  get_it: ^7.2.0
+  
+  youtube_player_flutter: ^8.1.2
+  webview_flutter: ^4.0.7
+  get_storage: ^2.1.1
+  shared_preferences: ^2.0.20
 
 dev_dependencies:
   flutter_test:

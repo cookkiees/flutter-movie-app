@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermovieapp/app/features/account/account_screen.dart';
-import 'package:fluttermovieapp/app/features/dashboard/dashboard_controller.dart';
-import 'package:fluttermovieapp/app/features/home/home_screen.dart';
-import 'package:fluttermovieapp/app/features/movie/movie_screen.dart/detail_movie_screen.dart';
-import 'package:fluttermovieapp/app/features/search/search_screen.dart';
 
 import 'package:get/get.dart';
+
+import '../tv/views/tv_screen.dart';
+import '../home/views/home_screen.dart';
+import '../search/views/search_screen.dart';
+import 'dashboard_controller.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -16,10 +16,10 @@ class DashboardPage extends StatelessWidget {
       return Scaffold(
         body: IndexedStack(
           index: controller.tabIndex,
-          children: [
+          children: const [
             HomeScreen(),
             SearchScreen(),
-            AccountScreen(),
+            TVScreen(),
             Icon(Icons.abc),
           ],
         ),
@@ -51,7 +51,7 @@ class DashboardPage extends StatelessWidget {
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.favorite_border),
+                icon: Icon(Icons.tv_outlined),
                 label: '',
               ),
               BottomNavigationBarItem(
