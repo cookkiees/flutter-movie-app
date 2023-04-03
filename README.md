@@ -23,6 +23,8 @@ samples, guidance on mobile development, and a full API reference.
 
 ![alt text](https://github.com/cookkiees/flutter-movie-app/blob/bbe77d350c6cbb639c5d9c1cf9bf44b5f388bc42/assets/ss/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202023-04-03%20at%2010.11.57_258x559.jpg)
 
+![alt Text](https://github.com/cookkiees/flutter-movie-app/blob/a90dc20059b7a51815372a69f1411e81ced2e25c/assets/ss/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20Max%20-%202023-04-03%20at%2010.12.04_258x559.jpg)
+
 
 ### Trailer Movie
 
