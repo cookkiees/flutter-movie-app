@@ -12,8 +12,6 @@ import '../movie/models/videos_model.dart';
 import '../tv/models/tv_credits_model.dart';
 import '../tv/models/tv_details_model.dart';
 import '../tv/models/tv_response_model.dart';
-import '../tv/models/tv_seasons_details_model.dart';
-import '../tv/models/tv_videos_model.dart';
 import 'dashboard_interactor.dart';
 
 class DashboardController extends GetxController {
